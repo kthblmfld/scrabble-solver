@@ -6,6 +6,8 @@ This service looks up English words comprised of user-supplied letters.
 It is a Spring Boot project built using Maven. As such, the project can be imported via the pom file and
 launched via the main() method in ScrabbleSolverApplication.java during development.
 
+The readme is txt because this was done as an interview assignment. It is my own implementation. The next step would be to put in the Aho–Corasick algorithm to reduce the cost of computing words. Maybe some other project or time...
+
 
 Starting the service
 ---------------
