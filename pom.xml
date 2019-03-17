@@ -14,7 +14,7 @@
         <junit.version>4.12</junit.version>
         <jmockit.version>1.38</jmockit.version>
         <assertj-core.version>3.8.0</assertj-core.version>
-        <spring-boot-starter.version>1.5.9.RELEASE</spring-boot-starter.version>
+        <spring-boot-starter.version>2.0.5.RELEASE</spring-boot-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -54,6 +54,35 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertj-core.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.opentracing.contrib</groupId>
+            <artifactId>opentracing-spring-cloud-starter</artifactId>
+            <version>0.2.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lightstep.tracer</groupId>
+            <artifactId>lightstep-tracer-jre</artifactId>
+            <version>0.14.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty</artifactId>
+            <version>1.14.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-tcnative-boringssl-static</artifactId>
+            <version>2.0.20.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lightstep.tracer</groupId>
+            <artifactId>tracer-grpc</artifactId>
+            <version>0.15.10</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,18 +96,18 @@
             </resource>
         </resources>
         <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <version>${spring-boot-starter.version}</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>repackage</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-starter.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
